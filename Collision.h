@@ -1,6 +1,9 @@
 #pragma once
+#ifndef _COLLISION_H
+#define _COLLISION_H
+
 #include <SFML\Graphics.hpp>
-#include <iostream>
+#endif // !_COLLISION_H
 
 class Collision
 {
@@ -9,7 +12,7 @@ public:
 	~Collision();
 
 	void move(float dx, float dy) { body.move(dx, dy); }
-	bool checkcollision(Collision & other,sf::Vector2f&, float push);
+	bool checkCollision(Collision & other,sf::Vector2f&, float push);
 
 	sf::Vector2f GetPosition() { return body.getPosition(); };
 	sf::Vector2f GetHalfSize() { return body.getSize() / 2.0f; };
